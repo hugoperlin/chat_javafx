@@ -36,7 +36,7 @@ public class Controller {
     @FXML
     private Button btEnviar;
 
-    private Cliente cliente;
+    private ChatClient cliente;
 
     public void initialize() {
         ajustaComponentes(false);
