@@ -8,15 +8,10 @@ import java.util.Vector;
 
 public class AppServer {
     public static void main(String[] args) throws Exception{
-        ServerSocket server = new ServerSocket(12345);
-        Vector<BufferedWriter> clientes = new Vector<>();
+        
+        ChatServer server = new ChatServer(12345);
 
-        while(true){
-            System.out.println("Aguardando conexão...");
-            Socket con = server.accept();
-            System.out.println(con.getRemoteSocketAddress());
-            Thread t = new Thread(new Server(con,clientes));
-            t.start();
-        }
+        server.listen();
+        
     }
 }

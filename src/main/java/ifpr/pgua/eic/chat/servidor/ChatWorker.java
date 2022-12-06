@@ -10,7 +10,7 @@ import java.io.OutputStreamWriter;
 import java.net.Socket;
 import java.util.Vector;
 
-public class Server implements Runnable {
+public class ChatWorker implements Runnable {
 
     private Vector<BufferedWriter> clientes;
     private String nome;
@@ -25,7 +25,7 @@ public class Server implements Runnable {
     private BufferedWriter bfW;
 
 
-    public Server(Socket socket, Vector<BufferedWriter> clientes){
+    public ChatWorker(Socket socket, Vector<BufferedWriter> clientes){
         this.clientes = clientes;
         this.socket = socket;
         

@@ -9,7 +9,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.Socket;
 
-public class Cliente {
+public class ChatClient {
 
     private String nome;
     private String ipServidor;
@@ -26,7 +26,7 @@ public class Cliente {
     private OutputStreamWriter ouW;
     private BufferedWriter bfW;
 
-    public Cliente(String nome, String ipServidor, int portaServidor) throws IOException {
+    public ChatClient(String nome, String ipServidor, int portaServidor) throws IOException {
 
         this.nome = nome;
         this.ipServidor = ipServidor;
